@@ -12,4 +12,4 @@ jobs:
       - uses: actions/setup-node@v3
       - uses: AndreaMolinari/rn-conventional-release@v1.0.0
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
