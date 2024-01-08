@@ -3,11 +3,11 @@ import {
     StyleSheet,
     View,
     Text,
+    FlatList,
 } from "react-native";
 import axios from "axios";
 import SearchBar from "../components/SearchBar";
 import Article from "../components/Article.js";
-import { FlatList } from "react-native-web";
 
 
 const SearchScreen = () => {
