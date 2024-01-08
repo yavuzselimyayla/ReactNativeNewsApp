@@ -6,14 +6,8 @@ on:
 jobs:
   build-android-app:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
-      - uses: AndreaMolinari/RNAndroidBuild@v1.0.0
-        with:
-          package-name: com.android.example
-          KEYSTORE64: ${{ secrets.KEYSTORE64 }}
-          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-          ANDROID_ALIAS: ${{ secrets.ANDROID_ALIAS }}
-          ANDROID_ALIAS_PASS: ${{ secrets.ANDROID_ALIAS_PASS }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+      - uses: actions/setup-node@v3
+      - uses: AndreaMolinari/rn-conventional-release@v1.0.0
